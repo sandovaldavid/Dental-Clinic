@@ -12,6 +12,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: var(--dark-text);
+}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -59,6 +67,7 @@ nav {
     color: var(--dark-text);
     font-weight: 500;
     transition: color 0.3s;
+    cursor: pointer;
 }
 
 .nav-menu a:hover {
