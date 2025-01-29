@@ -109,6 +109,11 @@ nav {
     color: var(--primary-blue);
 }
 
+.hero-content p{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
 .hero-image {
     flex: 1;
 }
