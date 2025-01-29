@@ -463,28 +463,83 @@ nav {
 
 /* Footer */
 footer {
-    background: var(--primary-blue);
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #1565c0 100%);
     color: var(--white);
-    padding: 3rem 5%;
+    padding: 1rem 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-green), var(--primary-blue));
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
-.social-links,
+.social-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.social-icon {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 .quick-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.social-links a,
 .quick-links a {
     color: var(--white);
     text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.quick-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-green);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.quick-links a:hover::after {
+    transform: scaleX(1);
 }
 
 /* Responsive Design */
@@ -495,12 +550,6 @@ footer {
 
     #hero {
         flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        gap: 2rem;
         text-align: center;
     }
 
@@ -547,5 +596,21 @@ footer {
     #contacto h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .social-links,
+    .quick-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    footer {
+        padding: 3rem 5%;
     }
 }
