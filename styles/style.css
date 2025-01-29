@@ -224,26 +224,118 @@ nav {
 /* Tips Section */
 #consejos {
     padding: 6rem 5%;
-    background: var(--light-gray);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+    position: relative;
+}
+
+#consejos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+#consejos h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary-green);
+    border-radius: 2px;
 }
 
 .tips-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 .tip-card {
     background: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tip-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--primary-blue), var(--primary-green));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
 }
 
 .tip-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.tip-card:hover::before {
+    opacity: 0.05;
+}
+
+.tip-card h3 {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.tip-card p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* icons to tip cards */
+.tip-card::after {
+    content: '';
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover::after {
+    transform: scale(1.1);
+}
+
+.tip-card:focus-within {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+.tip-icon {
+    width: 50px;
+    height: 50px;
 }
 
 /* Contact Section */
@@ -329,5 +421,23 @@ footer {
 
     #beneficios h2 {
         font-size: 2rem;
+    }
+
+    #consejos {
+        padding: 4rem 5%;
+    }
+
+    #consejos h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .tips-grid {
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .tip-card {
+        padding: 2rem;
     }
 }
