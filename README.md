@@ -118,7 +118,7 @@ View the live demo: [dental-clinic.devprojects.tech](https://dental-clinic.devpr
 
 ## ✍️ Authors <a name="authors"></a>
 
-- **Your Name** - *Initial work* - [YourGithub](https://github.com/yourusername)
+- **Your Name** - *Initial work* - [@sandovaldavid](https://github.com/sandovaldavid)
 
 See also the list of [contributors](https://github.com/sandovaldavid/Dental-Clinic) who participated in this project.
 
