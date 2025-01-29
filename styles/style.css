@@ -496,6 +496,8 @@ footer::before {
 }
 
 .social-icon {
+    display: flex;
+    align-items: center;
     color: var(--white);
     text-decoration: none;
     font-size: 1.1rem;
@@ -509,6 +511,12 @@ footer::before {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+    margin-right: .5rem;
 }
 
 .quick-links {
