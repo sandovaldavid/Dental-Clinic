@@ -64,13 +64,13 @@ This project is a professional landing page designed for dental clinics to showc
 1. Clone the repository
 
     ```bash
-    git clone https://github.com/yourusername/dental-clinic-landing.git
+    git clone https://github.com/sandovaldavid/Dental-Clinic.git
     ```
 
 2. Navigate to project directory
 
     ```bash
-    cd dental-clinic-landing
+    cd Dental-Clinic
     ```
 
 3. Open `index.html` in your browser or use a local server
