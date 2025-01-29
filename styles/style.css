@@ -634,3 +634,15 @@ footer::before {
         padding: 3rem 5%;
     }
 }
+
+@media (max-width: 375px) {
+    header {
+        width: 100vw;
+    }
+
+    section {
+        width: 100vw;
+        padding: 0; 
+        font-size: .5rem;
+    }
+}
