@@ -552,13 +552,25 @@ footer::before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    nav{
+        justify-content: space-around;
+    }
     .nav-menu {
+        display: none;
+    }
+
+    #btn-cita{
         display: none;
     }
 
     #hero {
         flex-direction: column;
         text-align: center;
+    }
+
+    .hero-content{
+        padding: 0;
+        margin-bottom: 2rem;
     }
 
     .benefits-grid {
@@ -575,7 +587,7 @@ footer::before {
     }
 
     #consejos {
-        padding: 4rem 5%;
+        padding: 6rem 5%;
     }
 
     #consejos h2 {
