@@ -146,4 +146,4 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 1. For issues and feature requests, please create an issue
 2. For urgent matters, contact [sandovaldavid2201@gmail.com](mailto:sandovaldavid2201@gmail.com)
-3. Documentation last updated: [Current Date]
+3. Documentation last updated: 29/01/2025
