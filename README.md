@@ -87,14 +87,14 @@ This project is a professional landing page designed for dental clinics to showc
 
 ``` text
 dental-clinic-landing/
-├── index.html              # Main HTML file
+├── index.html             # Main HTML file
 ├── styles/
 │   └── style.css          # CSS styles
 ├── images/
 │   ├── hero.avif          # Hero section image
 │   └── icons/             # SVG icons
 ├── CNAME                  # Domain configuration
-└── README.md             # Project documentation
+└── README.md              # Project documentation
 ```
 
 ## 🌐 Demo <a name="demo"></a>
